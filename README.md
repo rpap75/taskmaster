@@ -5,3 +5,7 @@ On the “Add a Task” page, allow users to type in details about a new task, s
 
 All Tasks
 The all tasks page should just be an image with a back button; it needs no functionality.
+
+![](img/mainActivityScreenShot.png)
+![](img/allTasksActivityScreenShot.png)
+![](img/addTaskActivityScreenShot.png)
