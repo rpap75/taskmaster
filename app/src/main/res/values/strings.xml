@@ -4,4 +4,10 @@
     <string name="taskTitle">Task Title</string>
     <string name="taskDescription">Task Description</string>
     <string name="totalTask">Total Task</string>
+    <string name="allTasksButton">ALL TASKS</string>
+    <string name="addTaskButton">ADD TASK</string>
+    <string name="mainActivityTitle">My Tasks</string>
+    <string name="allTasksTitle">All Tasks</string>
+    <string name="totalTasksCountTextdontuse" />
+    <string name="totalTasksCountText">Total tasks:</string>
 </resources>
