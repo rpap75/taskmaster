@@ -15,7 +15,7 @@ import com.rpap.taskmaster.R;
 public class UserSettingsActivity extends AppCompatActivity {
 
     SharedPreferences preferences;
-    public static final String Username_TAG = "username";
+    public static final String USERNAME_TAG = "username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +24,16 @@ public class UserSettingsActivity extends AppCompatActivity {
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String username = preferences.getString(Username_TAG, "");
-        EditText usernameEditText = (EditText) findViewById(R.id.userSettingsActivityUsernameEditTextView);
+        String username = preferences.getString(USERNAME_TAG, "");
+        EditText usernameEditText = findViewById(R.id.userSettingsActivityUsernameEditTextView);
+        usernameEditText.setText(username);
 
         Button saveButton = findViewById(R.id.userSettingsActivitySaveButton);
         saveButton.setOnClickListener(v -> {
             SharedPreferences.Editor preferencesEditor = preferences.edit();
-            EditText usernameEditText = (EditText) findViewById(R.id.userSettingsActivityUsernameEditTextView);
             String usernameString = usernameEditText.getText().toString();
 
-            preferencesEditor.putString(Username_TAG, usernameString);
+            preferencesEditor.putString(USERNAME_TAG, usernameString);
             preferencesEditor.apply();
 
 //            Snackbar.make(findViewById(R.id.userSettingsActivity), "Settings Saved!", Snackbar.LENGTH_SHORT).show();
