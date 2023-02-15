@@ -23,4 +23,8 @@
     <string name="usernameEditText">Input Field For Username</string>
     <string name="save">Save</string>
     <string name="taskOneButton">Task 1</string>
+    <string name="usernameTextView">username</string>
+    <string name="taskTwo">task two</string>
+    <string name="taskTwoButton">Task 2</string>
+    <string name="taskThreeButton">Task 3</string>
 </resources>
