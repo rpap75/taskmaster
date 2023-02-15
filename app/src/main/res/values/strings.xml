@@ -10,4 +10,17 @@
     <string name="allTasksTitle">All Tasks</string>
     <string name="totalTasksCountTextdontuse" />
     <string name="totalTasksCountText">Total tasks:</string>
+    <string name="addTaskTitle">Task Title</string>
+    <string name="addTaskDescription">Task Description</string>
+    <string name="addTaskBtn">Add Task Button</string>
+    <string name="addTaskActivityTaskTitleHint">Task Title</string>
+    <string name="addTaskActivityTaskDescriptionHint">Task Description</string>
+    <string name="addTaskActivityTextViewSubmitted">Submitted</string>
+    <string name="taskDetailTitle">Task Title</string>
+    <string name="settings_button">Navigate To User Settings</string>
+    <string name="settingsbutton">Navigate To User Settings</string>
+    <string name="userSettingsActivityUsername">Username</string>
+    <string name="usernameEditText">Input Field For Username</string>
+    <string name="save">Save</string>
+    <string name="taskOneButton">Task 1</string>
 </resources>
