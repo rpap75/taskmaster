@@ -52,15 +52,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
 
-    <TextView
-        android:id="@+id/mainActivityTaskOneTextViewBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="196dp"
-        android:text="@string/taskOneButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/mainActivityUsernameTextView"
@@ -74,23 +65,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/mainActivityTaskTwoTextViewBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="288dp"
-        android:text="@string/taskTwoButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/mainActivityTaskOneTextViewBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="84dp"-->
+<!--        android:layout_marginTop="196dp"-->
+<!--        android:text="@string/taskOneButton"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--    -->
+<!--    <TextView-->
+<!--        android:id="@+id/mainActivityTaskTwoTextViewBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="84dp"-->
+<!--        android:layout_marginTop="288dp"-->
+<!--        android:text="@string/taskTwoButton"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/mainActivityTaskThreeTextViewBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="392dp"
-        android:text="@string/taskThreeButton"
-        app:layout_constraintStart_toStartOf="parent"
+<!--    <TextView-->
+<!--        android:id="@+id/mainActivityTaskThreeTextViewBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="84dp"-->
+<!--        android:layout_marginTop="392dp"-->
+<!--        android:text="@string/taskThreeButton"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksActivityRecyclerViewTasks"
+        android:layout_width="237dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
