@@ -27,4 +27,8 @@
     <string name="taskTwo">task two</string>
     <string name="taskTwoButton">Task 2</string>
     <string name="taskThreeButton">Task 3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmentTitle">Title</string>
+    <string name="fragmentBody">Body</string>
 </resources>

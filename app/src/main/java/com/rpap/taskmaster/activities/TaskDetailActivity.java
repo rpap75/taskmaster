@@ -2,29 +2,34 @@ package com.rpap.taskmaster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.rpap.taskmaster.R;
+import com.rpap.taskmaster.adapter.taskRecyclerViewAdapter;
 
 public class TaskDetailActivity extends AppCompatActivity {
+    Context callingActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_detail);
-
+        consumeExtras();
+    }
+    public void consumeExtras(){
         Intent callingIntent = getIntent();
-        String userTaskString = null;
+        String taskTitle = null;
+        String taskBody = null;
         if (callingIntent != null) {
-            userTaskString = callingIntent.getStringExtra(MainActivity.TASKS_EXTRA_TAG);
-            TextView userTasksTextView = (TextView) findViewById(R.id.taskDetailActivityTitle);
-            if (userTaskString != null) {
-                userTasksTextView.setText(userTaskString);
-            } else {
-                userTasksTextView.setText("No Input");
-            }
+            taskTitle = callingIntent.getStringExtra(taskRecyclerViewAdapter.TASK_TITLE_TAG);
+            taskBody = callingIntent.getStringExtra(taskRecyclerViewAdapter.TASK_BODY_TAG);
         }
+        ((TextView) findViewById(R.id.taskDetailActivityTitle)).setText(taskTitle);
+        ((TextView) findViewById(R.id.taskDetailActivityBody)).setText(taskBody);
     }
 }
+
