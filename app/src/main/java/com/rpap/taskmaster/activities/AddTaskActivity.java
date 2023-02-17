@@ -37,14 +37,14 @@ public class AddTaskActivity extends AppCompatActivity {
         setUpStatusSpinner();
         setUpSaveButton();
 
-        Button addTaskButton = (Button) findViewById(R.id.addTaskActivityAddTaskButton);
-        addTaskButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView submittedTextView = (TextView) findViewById(R.id.addTaskActivitySubmittedText);
-                submittedTextView.setVisibility(View.VISIBLE);
-            }
-        });
+//        Button addTaskButton = (Button) findViewById(R.id.addTaskActivityAddTaskButton);
+//        addTaskButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TextView submittedTextView = (TextView) findViewById(R.id.addTaskActivitySubmittedText);
+//                submittedTextView.setVisibility(View.VISIBLE);
+//            }
+//        });
     }
 
     public void setUpStatusSpinner() {
@@ -59,8 +59,8 @@ public class AddTaskActivity extends AppCompatActivity {
         findViewById(R.id.addTaskActivityAddTaskButton).setOnClickListener(v -> {
             task newTask = new task(
                     ((EditText)findViewById(R.id.addTaskActivityTaskTitleInput)).getText().toString(),
-                    task.taskStatusEnum.fromString(taskStatusSpinner.getSelectedItem().toString()),
-                    ((EditText)findViewById(R.id.addTaskActivityTaskDescriptionInput)).getText().toString()
+                    ((EditText)findViewById(R.id.addTaskActivityTaskDescriptionInput)).getText().toString(),
+                    task.taskStatusEnum.fromString(taskStatusSpinner.getSelectedItem().toString())
                     );
             taskMasterDatabase.taskDao().insertATask(newTask);
             Toast.makeText(this, "Status Saved!", Toast.LENGTH_SHORT).show();

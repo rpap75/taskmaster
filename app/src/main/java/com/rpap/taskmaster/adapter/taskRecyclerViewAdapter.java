@@ -19,6 +19,7 @@ import java.util.List;
 public class taskRecyclerViewAdapter extends RecyclerView.Adapter<taskRecyclerViewAdapter.taskViewHolder> {
     public static final String TASK_TITLE_TAG = "task_title";
     public static final String TASK_BODY_TAG = "task_body";
+    public static final String TASK_STATUS_TAG = "task_status";
 
     Context callingActivity;
 
