@@ -45,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
 
-        taskList= taskMasterDatabase.taskDao().findAll();
+        taskList = taskMasterDatabase.taskDao().findAll();
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        setupButtons();
         setUpRecyclerView();
 
 //        TextView taskDetailButtonOne = (TextView) findViewById(R.id.mainActivityTaskOneTextViewBtn);
@@ -72,42 +74,43 @@ public class MainActivity extends AppCompatActivity {
 //            goToTaskDetailIntent.putExtra(TASKS_EXTRA_TAG, taskDetail);
 //            startActivity(goToTaskDetailIntent);
 //        });
-
-        ImageView settingsButton = (ImageView) findViewById(R.id.mainActivitySettingsImageView);
-        settingsButton.setOnClickListener(v -> {
-            Intent goToUserSettingsIntent = new Intent(this, UserSettingsActivity.class);
-            startActivity(goToUserSettingsIntent);
-        });
-
-        Button addTaskIntentButton = (Button) findViewById(R.id.mainActivityAddTaskButton);
-        addTaskIntentButton.setOnClickListener(v -> {
-            Intent goToAddTaskIntent = new Intent(this, AddTaskActivity.class);
-            startActivity(goToAddTaskIntent);
-        });
-
-        Button allTaskIntentButton = (Button) findViewById(R.id.mainActivityAllTasksButton);
-        allTaskIntentButton.setOnClickListener(v -> {
-            Intent goToAllTaskIntent = new Intent(this, AllTasksActivity.class);
-            startActivity(goToAllTaskIntent);
-        });
+//
+//        ImageView settingsButton = (ImageView) findViewById(R.id.mainActivitySettingsImageView);
+//        settingsButton.setOnClickListener(v -> {
+//            Intent goToUserSettingsIntent = new Intent(this, UserSettingsActivity.class);
+//            startActivity(goToUserSettingsIntent);
+//        });
+//
+//        Button addTaskIntentButton = (Button) findViewById(R.id.mainActivityAddTaskButton);
+//        addTaskIntentButton.setOnClickListener(v -> {
+//            Intent goToAddTaskIntent = new Intent(this, AddTaskActivity.class);
+//            startActivity(goToAddTaskIntent);
+//        });
+//
+//        Button allTaskIntentButton = (Button) findViewById(R.id.mainActivityAllTasksButton);
+//        allTaskIntentButton.setOnClickListener(v -> {
+//            Intent goToAllTaskIntent = new Intent(this, AllTasksActivity.class);
+//            startActivity(goToAllTaskIntent);
+//        });
     }
 
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        taskList.clear();
-        taskList.addAll(taskMasterDatabase.taskDao().findAll());
-        adapter.notifyDataSetChanged();
+        @Override
+        protected void onResume () {
+            super.onResume();
+            taskList.clear();
+            taskList.addAll(taskMasterDatabase.taskDao().findAll());
+            adapter.notifyDataSetChanged();
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String username = preferences.getString(USERNAME_TAG, "no username");
-        ((TextView) findViewById(R.id.mainActivityUsernameTextView)).setText(username);
+//        String username = preferences.getString(USERNAME_TAG, "no username");
 
-    }
+//        ((TextView) findViewById(R.id.mainActivityUsernameTextView)).setText(username);
 
-    public void setUpRecyclerView() {
+        }
+
+        public void setUpRecyclerView () {
 //        task task1 = new task("a", "1");
 //        task task2 = new task("b", "2");
 //        task task3 = new task("c", "3");
@@ -119,11 +122,31 @@ public class MainActivity extends AppCompatActivity {
 //        taskList.add(task4);
 //        taskList.add(task5);
 
-        RecyclerView tasksRecyclerView = findViewById(R.id.tasksActivityRecyclerViewTasks);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        tasksRecyclerView.setLayoutManager(layoutManager);
+            RecyclerView tasksRecyclerView = findViewById(R.id.tasksActivityRecyclerViewTasks);
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+            tasksRecyclerView.setLayoutManager(layoutManager);
 
-        taskRecyclerViewAdapter adapter = new taskRecyclerViewAdapter(taskList, this);
-        tasksRecyclerView.setAdapter(adapter);
+            adapter = new taskRecyclerViewAdapter(taskList, this);
+            tasksRecyclerView.setAdapter(adapter);
+        }
+
+        public void setupButtons () {
+
+            Button addTaskIntentButton = (Button) findViewById(R.id.mainActivityAddTaskButton);
+            addTaskIntentButton.setOnClickListener(v -> {
+                Intent goToAddTaskIntent = new Intent(this, AddTaskActivity.class);
+                startActivity(goToAddTaskIntent);
+            });
+            Button allTasksIntentButton = (Button) findViewById(R.id.mainActivityAllTasksButton);
+            allTasksIntentButton.setOnClickListener(v -> {
+                Intent goToAllTasksIntent = new Intent(this, AllTasksActivity.class);
+                startActivity(goToAllTasksIntent);
+            });
+
+            ImageView settingsButton = (ImageView) findViewById(R.id.mainActivitySettingsImageView);
+            settingsButton.setOnClickListener(v -> {
+                Intent goToSettingsIntent = new Intent(this, UserSettingsActivity.class);
+                startActivity(goToSettingsIntent);
+            });
+        }
     }
-}
