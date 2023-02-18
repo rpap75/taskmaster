@@ -69,9 +69,7 @@ public class task {
 
         @Override
         public String toString() {
-            return "taskStatusEnum{" +
-                    "taskStatus='" + taskStatus + '\'' +
-                    '}';
+            return taskStatus;
         }
     }
 }

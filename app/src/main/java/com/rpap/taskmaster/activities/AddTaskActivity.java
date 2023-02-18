@@ -63,7 +63,7 @@ public class AddTaskActivity extends AppCompatActivity {
                     task.taskStatusEnum.fromString(taskStatusSpinner.getSelectedItem().toString())
                     );
             taskMasterDatabase.taskDao().insertATask(newTask);
-            Toast.makeText(this, "Status Saved!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Task Added!", Toast.LENGTH_SHORT).show();
         });
     }
 

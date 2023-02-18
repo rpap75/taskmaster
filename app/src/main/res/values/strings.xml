@@ -6,7 +6,7 @@
     <string name="totalTask">Total Task</string>
     <string name="allTasksButton">ALL TASKS</string>
     <string name="addTaskButton">ADD TASK</string>
-    <string name="mainActivityTitle">My Tasks</string>
+    <string name="mainActivityTitle">Tasks</string>
     <string name="allTasksTitle">All Tasks</string>
     <string name="totalTasksCountTextdontuse" />
     <string name="totalTasksCountText">Total tasks:</string>
@@ -31,4 +31,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragmentTitle">Title</string>
     <string name="fragmentBody">Body</string>
+    <string name="taskFragStatus">Status</string>
+    <string name="taskDetailStatus">Status</string>
+    <string name="allTaskTitle">Title</string>
+    <string name="allTaskBody">Body</string>
+    <string name="allTaskStatus">Status</string>
 </resources>

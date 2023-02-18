@@ -24,12 +24,15 @@ public class TaskDetailActivity extends AppCompatActivity {
         Intent callingIntent = getIntent();
         String taskTitle = null;
         String taskBody = null;
+        String taskStatus = null;
         if (callingIntent != null) {
             taskTitle = callingIntent.getStringExtra(taskRecyclerViewAdapter.TASK_TITLE_TAG);
             taskBody = callingIntent.getStringExtra(taskRecyclerViewAdapter.TASK_BODY_TAG);
+            taskStatus = callingIntent.getStringExtra(taskRecyclerViewAdapter.TASK_STATUS_TAG);
         }
         ((TextView) findViewById(R.id.taskDetailActivityTitle)).setText(taskTitle);
         ((TextView) findViewById(R.id.taskDetailActivityBody)).setText(taskBody);
+        ((TextView) findViewById(R.id.taskDetailActivityStatus)).setText(taskStatus);
     }
 }
 
