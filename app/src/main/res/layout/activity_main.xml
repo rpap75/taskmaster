@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F9FBE7"
     android:contentDescription="@string/settings_button"
     tools:context=".activities.MainActivity">
 
@@ -12,9 +13,12 @@
         android:id="@+id/mainActivityAddTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="72dp"
+        android:backgroundTint="#6D80DEEA"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/addTaskButton"
+        android:textColor="#D0E57373"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -22,9 +26,12 @@
         android:id="@+id/mainActivityAllTasksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="72dp"
+        android:backgroundTint="#6D80DEEA"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/allTasksButton"
+        android:textColor="#D0E57373"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -32,10 +39,11 @@
         android:id="@+id/mainActivityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
+        android:layout_marginStart="196dp"
         android:layout_marginTop="72dp"
+        android:fontFamily="@font/vollkorn_sc_semibold"
         android:text="@string/mainActivityTitle"
-        android:textColor="@color/black"
+        android:textColor="#9575CD"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,61 +54,64 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:background="#FFFFFF"
+        android:background="#E9F8E9"
         android:contentDescription="@string/settingsbutton"
+        app:circularflow_defaultRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
 
 
+    <!--    <TextView-->
+    <!--        android:id="@+id/mainActivityTaskOneTextViewBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="84dp"-->
+    <!--        android:layout_marginTop="196dp"-->
+    <!--        android:text="@string/taskOneButton"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    -->
+    <!--    <TextView-->
+    <!--        android:id="@+id/mainActivityTaskTwoTextViewBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="84dp"-->
+    <!--        android:layout_marginTop="288dp"-->
+    <!--        android:text="@string/taskTwoButton"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/mainActivityTaskThreeTextViewBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="84dp"-->
+    <!--        android:layout_marginTop="392dp"-->
+    <!--        android:text="@string/taskThreeButton"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
     <TextView
         android:id="@+id/mainActivityUsernameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="72dp"
         android:text="@string/usernameTextView"
-        android:textColor="@color/black"
+        android:textColor="#9575CD"
         android:textSize="32sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/mainActivityTaskOneTextViewBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="84dp"-->
-<!--        android:layout_marginTop="196dp"-->
-<!--        android:text="@string/taskOneButton"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-<!--    -->
-<!--    <TextView-->
-<!--        android:id="@+id/mainActivityTaskTwoTextViewBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="84dp"-->
-<!--        android:layout_marginTop="288dp"-->
-<!--        android:text="@string/taskTwoButton"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/mainActivityTaskThreeTextViewBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="84dp"-->
-<!--        android:layout_marginTop="392dp"-->
-<!--        android:text="@string/taskThreeButton"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/vollkorn_sc_semibold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tasksActivityRecyclerViewTasks"
-        android:layout_width="237dp"
-        android:layout_height="364dp"
+        android:id="@+id/mainActivityRecyclerViewTasks"
+        android:layout_width="377dp"
+        android:layout_height="379dp"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

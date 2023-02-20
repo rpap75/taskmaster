@@ -20,7 +20,6 @@ import com.rpap.taskmaster.adapter.taskRecyclerViewAdapter;
 import com.rpap.taskmaster.database.taskMasterDatabase;
 import com.rpap.taskmaster.model.task;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -102,11 +101,11 @@ public class MainActivity extends AppCompatActivity {
             taskList.addAll(taskMasterDatabase.taskDao().findAll());
             adapter.notifyDataSetChanged();
 
-//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-//        String username = preferences.getString(USERNAME_TAG, "no username");
+        String username = preferences.getString(USERNAME_TAG, "no username");
 
-//        ((TextView) findViewById(R.id.mainActivityUsernameTextView)).setText(username);
+        ((TextView) findViewById(R.id.mainActivityUsernameTextView)).setText(username + "'s");
 
         }
 
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 //        taskList.add(task4);
 //        taskList.add(task5);
 
-            RecyclerView tasksRecyclerView = findViewById(R.id.tasksActivityRecyclerViewTasks);
+            RecyclerView tasksRecyclerView = findViewById(R.id.mainActivityRecyclerViewTasks);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
             tasksRecyclerView.setLayoutManager(layoutManager);
 
