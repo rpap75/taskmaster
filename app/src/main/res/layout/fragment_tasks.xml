@@ -6,7 +6,7 @@
     android:layout_height="64dp"
     android:layout_marginStart="5dp"
     android:layout_marginTop="20dp"
-    android:background="@android:color/holo_blue_dark"
+    android:background="#CD90CAF9"
     tools:context=".fragments.taskFragmentTitleStatus">
 
     <!--    <TextView-->
@@ -27,9 +27,9 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/fragmentTitle"
-        android:textColor="@color/black"
+        android:textColor="#9575CD"
         android:textSize="24sp"
         tools:textStyle="bold" />
 
@@ -39,9 +39,9 @@
         android:layout_height="32dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/taskFragStatus"
-        android:textColor="@color/black"
+        android:textColor="#9575CD"
         android:textSize="24sp"
         tools:textStyle="bold" />
 </FrameLayout>
