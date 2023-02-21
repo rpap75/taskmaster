@@ -50,47 +50,6 @@ public class MainActivity extends AppCompatActivity {
         setupButtons();
         setUpRecyclerView();
 
-//        TextView taskDetailButtonOne = (TextView) findViewById(R.id.mainActivityTaskOneTextViewBtn);
-//        taskDetailButtonOne.setOnClickListener(v -> {
-//            String taskDetail = ((TextView) findViewById(R.id.mainActivityTaskOneTextViewBtn)).getText().toString();
-//            Intent goToTaskDetailIntent = new Intent(this, TaskDetailActivity.class);
-//            goToTaskDetailIntent.putExtra(TASKS_EXTRA_TAG, taskDetail);
-//            startActivity(goToTaskDetailIntent);
-//        });
-//
-//        TextView taskDetailButtonTwo = (TextView) findViewById(R.id.mainActivityTaskTwoTextViewBtn);
-//        taskDetailButtonTwo.setOnClickListener(v -> {
-//            String taskDetail = ((TextView) findViewById(R.id.mainActivityTaskTwoTextViewBtn)).getText().toString();
-//            Intent goToTaskDetailIntent = new Intent(this, TaskDetailActivity.class);
-//            goToTaskDetailIntent.putExtra(TASKS_EXTRA_TAG, taskDetail);
-//            startActivity(goToTaskDetailIntent);
-//        });
-//
-//        TextView taskDetailButtonThree = (TextView) findViewById(R.id.mainActivityTaskThreeTextViewBtn);
-//        taskDetailButtonThree.setOnClickListener(v -> {
-//            String taskDetail = ((TextView) findViewById(R.id.mainActivityTaskThreeTextViewBtn)).getText().toString();
-//            Intent goToTaskDetailIntent = new Intent(this, TaskDetailActivity.class);
-//            goToTaskDetailIntent.putExtra(TASKS_EXTRA_TAG, taskDetail);
-//            startActivity(goToTaskDetailIntent);
-//        });
-//
-//        ImageView settingsButton = (ImageView) findViewById(R.id.mainActivitySettingsImageView);
-//        settingsButton.setOnClickListener(v -> {
-//            Intent goToUserSettingsIntent = new Intent(this, UserSettingsActivity.class);
-//            startActivity(goToUserSettingsIntent);
-//        });
-//
-//        Button addTaskIntentButton = (Button) findViewById(R.id.mainActivityAddTaskButton);
-//        addTaskIntentButton.setOnClickListener(v -> {
-//            Intent goToAddTaskIntent = new Intent(this, AddTaskActivity.class);
-//            startActivity(goToAddTaskIntent);
-//        });
-//
-//        Button allTaskIntentButton = (Button) findViewById(R.id.mainActivityAllTasksButton);
-//        allTaskIntentButton.setOnClickListener(v -> {
-//            Intent goToAllTaskIntent = new Intent(this, AllTasksActivity.class);
-//            startActivity(goToAllTaskIntent);
-//        });
     }
 
 
@@ -110,16 +69,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void setUpRecyclerView () {
-//        task task1 = new task("a", "1");
-//        task task2 = new task("b", "2");
-//        task task3 = new task("c", "3");
-//        task task4 = new task("d", "4");
-//        task task5 = new task("e", "5");
-//        taskList.add(task1);
-//        taskList.add(task2);
-//        taskList.add(task3);
-//        taskList.add(task4);
-//        taskList.add(task5);
 
             RecyclerView tasksRecyclerView = findViewById(R.id.mainActivityRecyclerViewTasks);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
